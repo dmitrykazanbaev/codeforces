@@ -58,3 +58,70 @@
 ```
 
 </details>
+
+<details>
+  <summary>
+    <b>Валерий против всех - ValeriiAgainstEveryone</b>
+  </summary>
+
+Вам дан массив ![equation](https://latex.codecogs.com/svg.latex?b) длиной ![equation](https://latex.codecogs.com/svg.latex?n). 
+Определим другой массив ![equation](https://latex.codecogs.com/svg.latex?a), также длиной ![equation](https://latex.codecogs.com/svg.latex?n), 
+в котором ![equation](https://latex.codecogs.com/svg.latex?a_{i}=2^{b^{i}}(1<=i<=n)).
+
+Валерий утверждает, что любые два непересекающихся подмассива ![equation](https://latex.codecogs.com/svg.latex?a) 
+имеют разную сумму элементов. Вы хотите определить, ошибается ли он. Более формально, необходимо определить, 
+существуют ли четыре целых числа ![equation](https://latex.codecogs.com/svg.latex?l_{1},r_{1},l_{2},r_{2}), 
+которые удовлетворяют следующим условиям:
+ - ![equation](https://latex.codecogs.com/svg.latex?1<=l_{1}<=r_{1}<=l_{2}<=r_{2}<=n);
+ - ![equation](https://latex.codecogs.com/svg.latex?a_{l_{1}}+a_{l_{1}+1}+...+a_{r_{1}-1}+a_{r_{1}}=a_{l_{2}}+a_{l_{2}+1}+...+a_{r_{2}-1}+a_{r_{2}}).
+ 
+Если такие четыре целых числа существуют, вы докажете, что Валерий ошибается. Существуют ли они?
+
+Массив ![equation](https://latex.codecogs.com/svg.latex?c) является подмассивом массива ![equation](https://latex.codecogs.com/svg.latex?d),
+если ![equation](https://latex.codecogs.com/svg.latex?c) может быть получен из ![equation](https://latex.codecogs.com/svg.latex?d) 
+удалением нескольких (возможно, ни одного или всех) элементов из начала и нескольких (возможно, ни одного или всех)
+элементов из конца.
+
+#### Входные данные
+Каждый тест содержит несколько наборов входных данных. В первой строке указано количество наборов входных данных
+![equation](https://latex.codecogs.com/svg.latex?t(1<=t<=100)). Описание наборов входных данных приведено ниже.
+
+Первая и единственная строка каждого набора входных данных содержит одно целое 
+![equation](https://latex.codecogs.com/svg.latex?n(2<=n<=1000))
+
+Вторая строка набора входных данных содержит ![equation](https://latex.codecogs.com/svg.latex?n) целых чисел
+![equation](https://latex.codecogs.com/svg.latex?b_{1},b_{2},...,b_{n}(0<=b_{i}<=10^{9}))
+
+#### Выходные данные
+Для каждого набора входных данных, если в ![equation](https://latex.codecogs.com/svg.latex?a) есть два
+ непересекающихся подмассива, которые имеют одинаковую сумму, выведите *YES* в отдельной строке. 
+ В противном случае выведите *NO* в отдельной строке.
+
+Также обратите внимание, что каждая буква может быть в любом регистре.
+
+Примеры:
+```
+Ввод	
+
+2
+6
+4 3 0 1 2 0
+2
+2 5
+
+Вывод
+
+YES
+NO
+
+```
+
+#### Примечание
+
+В первом случае ![equation](https://latex.codecogs.com/svg.latex?a=[16,8,1,2,4,1]). Значения 
+![equation](https://latex.codecogs.com/svg.latex?l_{1}=1,r_{1}=1,l_{2}=2,r_{2}=6) подходят, потому что 
+![equation](https://latex.codecogs.com/svg.latex?16=(8+1+2+4+1)).
+
+Во втором случае можно проверить, что такие подмассивы выбрать невозможно.
+
+</details>
